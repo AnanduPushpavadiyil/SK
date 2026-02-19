@@ -9,8 +9,8 @@ const nextConfig = {
 
   // Enable static export
   output: 'export', // Required for `next export`
-  
-  basePath: '/SK', // Add the repository name here
+
+  basePath: '/', // Add the repository name here
   assetPrefix: './', // Ensures static assets use the correct prefix
   // Uncomment to add domain whitelist for images
   // Ensure compatibility with static export

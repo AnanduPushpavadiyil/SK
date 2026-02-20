@@ -1,16 +1,12 @@
-// src/app/public/login/page.tsx
-
-'use client'; // Ensure this is at the top for client-side rendering
-
-// import { useState } from 'react';
-
 import Wrapper from '@/app/components/customer/common/wrapper';
 import PhotographyCollection from '@/app/components/customer/PhotographyCollection';
+import { getLandingImages } from '@/lib/getLandingImages';
 
-const GalleryPage: React.FC = () => {
+const GalleryPage = async () => {
+  const products = getLandingImages();
   return (
     <Wrapper path='/gallery'>
-      <PhotographyCollection />
+      <PhotographyCollection products={products} />
     </Wrapper>
   );
 };

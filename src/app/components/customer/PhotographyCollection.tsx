@@ -4,9 +4,9 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FaDownload, FaHeart, FaShareAlt } from 'react-icons/fa';
 
-import { products } from '@/app/components/customer/common/dummyData';
+type Product = { image: string; name: string; width: number; height: number };
 
-const PhotographyGallery = () => {
+const PhotographyGallery = ({ products }: { products: Product[] }) => {
   const generatePins = (start: number) =>
     products.map((product, i) => ({
       id: start + i,

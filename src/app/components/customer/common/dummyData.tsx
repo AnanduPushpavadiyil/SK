@@ -148,7 +148,7 @@ export const designerServices = [
     title: 'Pre-Wedding Shoot',
     description:
       'Capture the magic before your big day with a personalized pre-wedding session.',
-    imageUrl: './images/landing/alor.adesigner__2024-11-27T081758.000Z.jpg ',
+    imageUrl: './images/gallery/IMG_8796.jpg',
   },
   {
     title: 'Wedding Ceremony Photography',

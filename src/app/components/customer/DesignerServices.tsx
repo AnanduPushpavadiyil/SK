@@ -28,7 +28,7 @@ const DesignerServices = () => {
         {designerServices.map((service, index) => (
           <SwiperSlide key={index}>
             <motion.div
-              className=' relative w-full h-80 bg-cover bg-center dark:text-white text-black text-center flex flex-col justify-center items-center'
+              className='rounded-lg relative w-full h-screen bg-cover bg-center dark:text-white text-black text-center flex flex-col justify-center items-center'
               style={{
                 backgroundImage: `url(${service.imageUrl}), radial-gradient(circle, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%)`,
               }}
@@ -36,7 +36,7 @@ const DesignerServices = () => {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <div className='dark:bg-black bg-white dark:bg-opacity-50 bg-opacity-50 p-6 rounded-lg w-[80%]'>
+              <div className='dark:bg-black bg-white dark:bg-opacity-50 bg-opacity-50 p-20 rounded-lg w-[80%] h-[40%]'>
                 <h2 className='text-4xl font-bold mb-4'>{service.title}</h2>
                 <p className='text-xl'>{service.description}</p>
               </div>

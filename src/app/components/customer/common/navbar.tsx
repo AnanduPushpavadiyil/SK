@@ -57,19 +57,17 @@ const NavBar: React.FC<{ path?: string }> = ({ path }) => {
       {!isMenuOpen ? (
         <nav
           className={`fixed top-0 left-0 flex justify-between items-center w-full px-6 py-4 
-            backdrop-blur-xl border border-white/20 rounded-b-2xl shadow-lg
+            backdrop-blur-xl border border-white/20 rounded-b-lg shadow-lg
             transition-all duration-700 ease-in-out z-40
-            ${
-              scrollPosition > 50
-                ? showNav
-                  ? 'translate-y-0 opacity-100'
-                  : '-translate-y-full opacity-0'
-                : 'translate-y-0 opacity-100'
+            ${scrollPosition > 50
+              ? showNav
+                ? 'translate-y-0 opacity-100'
+                : '-translate-y-full opacity-0'
+              : 'translate-y-0 opacity-100'
             }
-            ${
-              theme === 'dark'
-                ? 'bg-[#0f0f0f]/60 text-white'
-                : 'bg-white/40 text-black'
+            ${theme === 'dark'
+              ? 'bg-[#0f0f0f]/60 text-white'
+              : 'bg-white/40 text-black'
             }`}
         >
           {/* Left side */}
@@ -102,10 +100,9 @@ const NavBar: React.FC<{ path?: string }> = ({ path }) => {
                     href={item.link}
                     className={`px-3 py-2 rounded-xl font-medium transition-all duration-300
                       border border-transparent
-                      ${
-                        theme === 'dark'
-                          ? 'hover:bg-white/10 hover:border-white/20'
-                          : 'hover:bg-black/10 hover:border-black/20'
+                      ${theme === 'dark'
+                        ? 'hover:bg-white/10 hover:border-white/20'
+                        : 'hover:bg-black/10 hover:border-black/20'
                       }`}
                   >
                     <div className='flex items-center gap-2'>
@@ -123,10 +120,9 @@ const NavBar: React.FC<{ path?: string }> = ({ path }) => {
               href='#'
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
               className={`p-2 rounded-full shadow-md transition-all duration-300 hover:rotate-180
-                ${
-                  theme === 'dark'
-                    ? 'bg-white/10 hover:bg-white/20 text-yellow-400'
-                    : 'bg-black/10 hover:bg-black/20 text-blue-600'
+                ${theme === 'dark'
+                  ? 'bg-white/10 hover:bg-white/20 text-yellow-400'
+                  : 'bg-black/10 hover:bg-black/20 text-blue-600'
                 }`}
             >
               {theme === 'dark' ? <FaSun size={18} /> : <FaMoon size={18} />}
@@ -160,11 +156,10 @@ const NavBar: React.FC<{ path?: string }> = ({ path }) => {
                     key={index}
                     href={item.link}
                     onClick={() => setMenuOpen(false)}
-                    className={`px-4 py-3 rounded-lg transition-all duration-300 ${
-                      path === item.link
-                        ? 'bg-gray-300 dark:bg-gray-800'
-                        : 'hover:bg-gray-200 dark:hover:bg-gray-700'
-                    }`}
+                    className={`px-4 py-3 rounded-lg transition-all duration-300 ${path === item.link
+                      ? 'bg-gray-300 dark:bg-gray-800'
+                      : 'hover:bg-gray-200 dark:hover:bg-gray-700'
+                      }`}
                   >
                     {item.text}
                   </Link>
@@ -177,11 +172,10 @@ const NavBar: React.FC<{ path?: string }> = ({ path }) => {
               <span className='font-medium'>Theme</span>
               <button
                 onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-                className={`p-2 rounded-full transition ${
-                  theme === 'dark'
-                    ? 'bg-white/10 hover:bg-white/20 text-yellow-400'
-                    : 'bg-black/10 hover:bg-black/20 text-blue-600'
-                }`}
+                className={`p-2 rounded-full transition ${theme === 'dark'
+                  ? 'bg-white/10 hover:bg-white/20 text-yellow-400'
+                  : 'bg-black/10 hover:bg-black/20 text-blue-600'
+                  }`}
               >
                 {theme === 'dark' ? <FaSun /> : <FaMoon />}
               </button>

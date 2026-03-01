@@ -18,9 +18,9 @@ const Home: React.FC = () => {
         <DesignerServices />
       </section>
       {/* Existing Sections */}
-      <section className='p-6 bg-gray-200 dark:bg-gray-700'>
+      {/* <section className='p-6 bg-gray-200 dark:bg-gray-700'>
         <GoogleReview />
-      </section>
+      </section> */}
       {/* Featured Products */}
       <section className='p-6 bg-gray-200 dark:bg-gray-700'>
         <PhotographyGallery />

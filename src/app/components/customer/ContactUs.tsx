@@ -141,7 +141,7 @@ const ContactUs: React.FC = () => {
         </div>
 
         {/* Google Reviews */}
-        <GoogleReview />
+        {/* <GoogleReview /> */}
       </motion.div>
     </div>
   );
